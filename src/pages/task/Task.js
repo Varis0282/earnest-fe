@@ -188,9 +188,9 @@ const Task = () => {
                   </div>
                   <div className='font-medium'>
                     <span>Completed at : </span>
-                    <Tooltip title={convertDateTime(task?.completedAt)}>
+                    {task?.completedAt ? <Tooltip title={convertDateTime(task?.completedAt)}>
                       {convertDate(task?.completedAt)}
-                    </Tooltip>
+                    </Tooltip> : 'Not Completed'}
                   </div>
                 </div>
               </Card>
